@@ -1,9 +1,10 @@
 package com.hfad.example.bitsandpizzashfadcom;
 
+import android.os.Bundle;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import android.os.Bundle;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -13,5 +14,9 @@ public class OrderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
     }
 }
